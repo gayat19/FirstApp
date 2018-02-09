@@ -1,0 +1,13 @@
+<div>
+    username : {{UserName}}
+    <input type="text" [(ngModel)]="UserName">
+    <button #myButton (click)="clickMe(myButton)" >click</button>
+</div>
+<div *ngFor="let item of items">
+    Item ID:<input type="text" [(ngModel)]="item.IID">
+    <br/>
+    Item Name:<input type="text" [(ngModel)]="item.IName">
+    <br/>
+    Item Price:<input type="text" [(ngModel)]="item.IPrice">
+    <button (click)="updateItem()">Buy</button>
+</div>
